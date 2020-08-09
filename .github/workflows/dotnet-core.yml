@@ -22,11 +22,4 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Run peacock
-      run: src/TerminalPeakcock/bin/Release/netcoreapp3.1/TerminalPeakcock default
-    - name: Publish release
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'release.zip'
-        path: src/TerminalPeakcock/bin/Release/netcoreapp3.1/TerminalPeakcock/output/
    
